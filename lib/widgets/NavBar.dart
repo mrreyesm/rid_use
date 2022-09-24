@@ -1,41 +1,66 @@
+import 'dart:js';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rid_use/screens/main_dashboard/main_dashboard.dart';
 import 'package:rid_use/screens/welcome/components/welcome_body.dart';
 
-Widget myAppBar(String title) {
+Widget myAppBar(String pageTitle, BuildContext context) {
   return AppBar(
-    backgroundColor: Color.fromRGBO(156, 204, 101, 1),
+    backgroundColor: const Color.fromRGBO(156, 204, 101, 1),
     //background color of Appbar to green
     toolbarHeight: 200,
-    title: Text(title),
+    title: Text(pageTitle),
     titleSpacing: 0,
     actions: <Widget>[
       IconButton(
         iconSize: 50,
         icon: Icon(Icons.dashboard),
         onPressed: () {
-          _onSearchButtonPressed();
+          _navigateToDashboard(context);
         },
       ),
       IconButton(
         iconSize: 50,
         icon: Icon(Icons.inventory),
-        onPressed: () {},
+        onPressed: () {
+          _navigateToInventory(context);
+        },
       ),
       IconButton(
         iconSize: 50,
         icon: Icon(Icons.insights),
-        onPressed: () {},
+        onPressed: () {
+          _navigateToInsights(context);
+        },
       ),
       IconButton(
         iconSize: 50,
         icon: Icon(Icons.support),
-        onPressed: () {},
+        onPressed: () {
+          _navigateToSupport(context);
+        },
       ),
     ],
   );
 }
 
-void _onSearchButtonPressed() {
-  print("search button clicked");
+void _navigateToDashboard(BuildContext context) {
+  Navigator.of(context)
+      .push(MaterialPageRoute(builder: (context) => const WelcomeBody()));
+}
+
+void _navigateToInventory(BuildContext context) {
+  Navigator.of(context)
+      .push(MaterialPageRoute(builder: (context) => const WelcomeBody()));
+}
+
+void _navigateToInsights(BuildContext context) {
+  Navigator.of(context)
+      .push(MaterialPageRoute(builder: (context) => const WelcomeBody()));
+}
+
+void _navigateToSupport(BuildContext context) {
+  Navigator.of(context)
+      .push(MaterialPageRoute(builder: (context) => const WelcomeBody()));
 }
