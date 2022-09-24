@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rid_use/screens/main_dashboard/main_dashboard.dart';
 import 'package:rid_use/screens/welcome/components/welcome_background.dart';
 import 'package:rid_use/widgets/AppDrawer.dart';
 import 'package:rid_use/widgets/NavBar.dart';
@@ -31,9 +30,7 @@ class WelcomeBody extends StatelessWidget {
         child: Scaffold(
       backgroundColor: Colors.green,
       appBar: PreferredSize(
-        preferredSize: preferredSize,
-        child: myAppBar("Dashboard"),
-      ),
+          preferredSize: preferredSize, child: myAppBar("Dashboard", context)),
       drawer: myDrawer(),
     ));
   }
