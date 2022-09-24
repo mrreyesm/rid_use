@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rid_use/screens/main_dashboard/main_dashboard.dart';
+import 'package:rid_use/screens/welcome/welcome.dart';
 
 class LoginBody extends StatelessWidget {
   const LoginBody({Key? key}) : super(key: key);
@@ -44,12 +44,12 @@ class LoginBody extends StatelessWidget {
                         onChanged: (value) {},
                       ),
                    TextButton(
-                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const MainDashboard()),);},
+                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Welcome()),);},
                         child: Text("Login"),
                       ),
                       SizedBox(height: size.height * 0.03),
                       TextButton(
-                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const MainDashboard()),);},
+                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Welcome()),);},
                         child: Text("Forgot Password"),
                       ),
                       SizedBox(height: size.height * 0.03),
