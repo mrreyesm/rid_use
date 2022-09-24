@@ -21,8 +21,8 @@ class WelcomeBackground extends StatelessWidget {
             left: 10,
             child: Image.asset(
               "assets/images/main_logo.png",
-              width: size.width * 0.10,
-              height: size.height * 0.10,
+              width: size.width,
+              height: size.height,
               fit: BoxFit.fitHeight,
             ),
           ),
