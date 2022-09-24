@@ -8,6 +8,21 @@ class WelcomeBody extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+  // @override
+  // Widget build(BuildContext context) {
+  //   return WelcomeBackground(
+  //       child: InkWell(
+  //       child: TextButton(
+  //         child: Text("Test"),
+  //         onPressed: () {Navigator.push(
+  //             context,
+  //             MaterialPageRoute(builder: (context) => const MainDashboard()),);},
+  //       ),
+  //     )
+  //   );
+  // }
+  // }
+
   @override
     Widget build(BuildContext context) {
       return WelcomeBackground(
