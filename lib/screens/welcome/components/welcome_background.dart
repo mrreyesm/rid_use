@@ -17,10 +17,10 @@ class WelcomeBackground extends StatelessWidget {
         alignment: Alignment.center,
         children: <Widget>[
           Positioned(
-            bottom: 0,
-            left: 0,
+            top: 10,
+            left: 10,
             child: Image.asset(
-              "assets/images/main2_logo.png",
+              "assets/images/main_logo.png",
               width: size.width,
               height: size.height,
               fit: BoxFit.fitHeight,
