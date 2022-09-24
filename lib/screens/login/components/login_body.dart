@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rid_use/screens/main_dashboard/main_dashboard.dart';
 
 class LoginBody extends StatelessWidget {
   const LoginBody({Key? key}) : super(key: key);
@@ -18,10 +19,6 @@ class LoginBody extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text(
-                        "LOGIN",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
                       SizedBox(height: size.height * 0.03),
                       Image.asset(
                               "images/logo-black.png",
@@ -29,7 +26,6 @@ class LoginBody extends StatelessWidget {
                               height: size.height * 0.5,
                               fit: BoxFit.fitHeight,
                             ),
-                      SizedBox(height: size.height * 0.03),
                       TextField(
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
@@ -48,12 +44,12 @@ class LoginBody extends StatelessWidget {
                         onChanged: (value) {},
                       ),
                    TextButton(
-                        onPressed: () {},
+                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const MainDashboard()),);},
                         child: Text("Login"),
                       ),
                       SizedBox(height: size.height * 0.03),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const MainDashboard()),);},
                         child: Text("Forgot Password"),
                       ),
                       SizedBox(height: size.height * 0.03),
