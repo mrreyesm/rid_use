@@ -8,14 +8,50 @@ class MainDashboardBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainDashboardBackground(
-        child: InkWell(
-        child: TextButton(
-          child: Text("Main Dashboard"),
-          style: TextButton.styleFrom(backgroundColor: Colors.black),
-          onPressed: () {},
-        ),
-      )
+    return MaterialApp(
+      home: DefaultTabController(
+          length: 4,
+          child: Scaffold(
+            drawer: Drawer(
+              child: ListView(
+                children: <Widget>[
+                  DrawerHeader(
+                    child: Text(
+                      "Drawer Text",
+                      textAlign: TextAlign.justify,
+                      textScaleFactor: 2.0,
+                    ),
+                    decoration: BoxDecoration(color: Colors.green),
+                  ),
+                  ListTile(
+                    title: Text("First"),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    title: Text("Second"),
+                    onTap: () {},
+                  )
+                ],
+              ),
+            ),
+            appBar: AppBar(
+              title: Text("Rid-Use"),
+              bottom: const TabBar(tabs: [
+                Tab(
+                  text: "Test",
+                ),
+                Tab(
+                  text: "Test 2",
+                ),
+                Tab(
+                  text: "Test 3",
+                ),
+                Tab(
+                  text: "Tab 4",
+                )
+              ]),
+            ),
+          )),
     );
   }
-  }
+}
