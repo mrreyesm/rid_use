@@ -2,8 +2,10 @@ import 'dart:js';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rid_use/screens/insights/insights.dart';
 import 'package:rid_use/screens/main_dashboard/main_dashboard.dart';
 import 'package:rid_use/screens/welcome/components/welcome_body.dart';
+import 'package:rid_use/screens/welcome/welcome.dart';
 
 Widget myAppBar(String pageTitle, BuildContext context) {
   return AppBar(
@@ -47,17 +49,17 @@ Widget myAppBar(String pageTitle, BuildContext context) {
 
 void _navigateToDashboard(BuildContext context) {
   Navigator.of(context)
-      .push(MaterialPageRoute(builder: (context) => const WelcomeBody()));
+      .push(MaterialPageRoute(builder: (context) => const Welcome()));
 }
 
 void _navigateToInventory(BuildContext context) {
   Navigator.of(context)
-      .push(MaterialPageRoute(builder: (context) => const WelcomeBody()));
+      .push(MaterialPageRoute(builder: (context) => const MainDashboard()));
 }
 
 void _navigateToInsights(BuildContext context) {
   Navigator.of(context)
-      .push(MaterialPageRoute(builder: (context) => const WelcomeBody()));
+      .push(MaterialPageRoute(builder: (context) => const Insights()));
 }
 
 void _navigateToSupport(BuildContext context) {
