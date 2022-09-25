@@ -14,7 +14,7 @@ class WelcomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return WelcomeBackground(
         child: Scaffold(
-      backgroundColor: Colors.green,
+      backgroundColor: Color.fromARGB(0, 245, 245, 220),
       appBar: PreferredSize(
           preferredSize: preferredSize, child: myAppBar("Dashboard", context)),
       drawer: myDrawer(),

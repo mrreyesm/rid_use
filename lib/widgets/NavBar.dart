@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rid_use/screens/insights/insights.dart';
@@ -9,8 +7,7 @@ import 'package:rid_use/screens/welcome/welcome.dart';
 
 Widget myAppBar(String pageTitle, BuildContext context) {
   return AppBar(
-    backgroundColor: const Color.fromRGBO(156, 204, 101, 1),
-    //background color of Appbar to green
+    backgroundColor: Color.fromARGB(0, 1, 93, 103),
     toolbarHeight: 200,
     title: Text(pageTitle),
     titleSpacing: 0,
